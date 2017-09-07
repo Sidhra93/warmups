@@ -10,18 +10,19 @@ var grannyTalk = function(str){
   var endYear = 1950;
   var year = Math.round(Math.random() * (endYear - startYear) + startYear);
   if (str === "bye"|| str === "BYE" ) {
-    console.log("What's that honey, I didn't hear you...");
+    reply = console.log("What's that honey, I didn't hear you...");
   } else if (str === str.toUpperCase()) {
-    console.log("NO, NOT SINCE " + year);
+    reply = console.log("NO, NOT SINCE " + year);
   } else {
-    console.log("SPEAK UP SONNY JIM!");
+    reply = console.log("SPEAK UP SONNY JIM!");
   }
+  return reply;
 }
 
-// var grandpaTalk = function(str){
-//   grannyTalk(str);
-//
-// }
+var grandpaTalk = function(str){
+  var grandpaReply = grannyTalk(str);
+  console.log(grandpaReply);
+}
 
 grannyTalk(askGranny);
-//grandpaTalk(askGrandpa);
+grandpaTalk(askGrandpa);
