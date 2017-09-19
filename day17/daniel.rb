@@ -6,12 +6,12 @@ end
 loop do
   puts "Speak to Daniel!"
   statement = gets.chomp
-  if statement.split.first == "bro"
+  if statement.split.first == "bro" # statement.start_with?("bro")
     i33tspeak(statement.gsub(/bro/, ""))
   elsif statement == ""
     puts "Fine! Be that way."
     break;
-  elsif statement.split("").last == "?" # statement[-1] == "?"
+  elsif statement.split("").last == "?" # statement[-1] == "?" || statement.end_with?("?")
     puts "Sure"
   elsif statement == statement.downcase
     puts "Whatever!"
